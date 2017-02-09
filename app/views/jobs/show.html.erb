@@ -4,5 +4,7 @@ Empresa: <span><%= @job.company %></span><br>
 Localização: <span><%= @job.location %></span><br>
 Categoria:  <span><%= @job.category%></span><br>
 Descrição: <span><%= @job.description%></span><br>
-
+<% if @job.featured %>
+  <strong>Destaque</strong>
+  <%end%>
 <%= link_to "Voltar", root_path %>
