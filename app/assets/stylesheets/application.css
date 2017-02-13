@@ -15,7 +15,25 @@
  *.=
 */
 
+.titulo {
+  color: gray;
+}
+
+input[type="text"], select, textarea, input[type="checkbox"] {
+  border: 2px solid black;
+  display: inline-flex;
+}
+
+.nova-vaga {
+  border-bottom: 1px solid black;
+}
+
 .notice {
   font-weight: bold;
   font-size: 18px;
+}
+
+label {
+  margin-right: 80px;
+  margin-bottom: 20px;
 }
