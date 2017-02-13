@@ -13,6 +13,8 @@ class JobsController < ApplicationController
     @job = Job.new(job_params)
     if @job.save
       redirect_to @job
+    else
+      redirect_to new_job_path, notice: "Não foi possível criar a vaga"
     end
   end
   private
