@@ -1,4 +1,12 @@
 <h1> <%= @company.name %> </h1>
-  <%= @company.location %>
-  <%= @company.mail %>
-  <%= @company.phone %>
+<%= @company.location %>
+<%= @company.mail %>
+<%= @company.phone %>
+
+<% @jobs.each do |job| %>
+  <%= render job %>
+<%end%>
+
+<%if @jobs.empty? %>
+  <p>Nenhuma vaga disponível</p>
+<%end%>

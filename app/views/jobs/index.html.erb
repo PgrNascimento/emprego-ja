@@ -1,9 +1,7 @@
 <% @jobs.each do |job| %>
-  <h1> <%= link_to job.title, job%></h1>
-  <%= job.company.name%> <br>
-  <%= job.location%> <br>
-  <%= job.category%> <br>
-  <% if job.featured %>
-    <strong>Destaque</strong>
-  <%end%>
+  <%= render partial: 'job', locals: {job: job} %>
+<%end%>
+
+<% @companies.each do |company| %>
+  <%= link_to company.name, company %>
 <%end%>
