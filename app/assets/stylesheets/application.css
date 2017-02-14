@@ -21,7 +21,8 @@
 
 input[type="text"], select, textarea, input[type="checkbox"] {
   border: 2px solid black;
-  display: inline-flex;
+  display: list-item;
+
 }
 
 .nova-vaga {
