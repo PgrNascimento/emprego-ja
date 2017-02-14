@@ -7,6 +7,7 @@ class JobsController < ApplicationController
     @job = Job.find params[:id]
   end
   def new
+    @companies = Company.all
     @job = Job.new
   end
   def create
@@ -14,6 +15,7 @@ class JobsController < ApplicationController
     if @job.save
       redirect_to @job
     else
+      @companies = Company.all
       flash[:error] = "Não foi possível criar a vaga"
       render :new
     end

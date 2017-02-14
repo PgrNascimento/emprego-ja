@@ -20,7 +20,7 @@
 
   <div class="">
     <%= f.label :company_id, "Empresa" %>
-    <%= f.collection_select(:company_id, Company.all, :id, :name) %>
+    <%= f.collection_select(:company_id, @companies, :id, :name) %>
 
   </div>
 
