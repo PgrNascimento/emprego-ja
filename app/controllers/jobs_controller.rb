@@ -10,6 +10,10 @@ class JobsController < ApplicationController
     @companies = Company.all
     @job = Job.new
   end
+  def edit
+    @companies = Company.all
+    @job = Job.find params[:id]
+  end
   def create
     @job = Job.new(job_params)
     if @job.save
@@ -18,6 +22,16 @@ class JobsController < ApplicationController
       @companies = Company.all
       flash[:error] = "Não foi possível criar a vaga"
       render :new
+    end
+  end
+  def update
+    @job = Job.find params[:id]
+    if @job.update job_params
+      redirect_to @job
+    else
+      @companies = Company.all
+      flash[:error] = 'Não foi possível atualizar a vaga'
+      render :edit
     end
   end
   private
