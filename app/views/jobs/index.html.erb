@@ -1,7 +1,13 @@
+<section>
 <% @jobs.each do |job| %>
-  <%= render partial: 'job', locals: {job: job} %>
+  <div class="">
+    <%= render job %>
+  </div>
 <%end%>
+</section>
 
-<% @companies.each do |company| %>
-  <%= link_to company.name, company %>
-<%end%>
+<aside class="">
+  <% @companies.each do |company| %>
+    <%= link_to company.name, company %>
+  <%end%>
+</aside>

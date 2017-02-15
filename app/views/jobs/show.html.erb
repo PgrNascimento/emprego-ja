@@ -1,9 +1,11 @@
 <h1><%= @job.title %></h1>
 <hr>
-Empresa: <span><%= @job.company.name %></span><br>
-Localização: <span><%= @job.location %></span><br>
-Categoria:  <span><%= @job.category%></span><br>
-Descrição: <span><%= @job.description%></span><br>
+<dl>
+  <dt>Empresa:</dt><dd> <%= @job.company.name %></dd>
+  <dt>Localização:</dt><dd> <%= @job.location %></dd>
+  <dt>Categoria: </dt><dd> <%= @job.category.name%></dd>
+  <dt>Descrição:</dt><dd> <%= @job.description%></dd>
+</dl>
 <% if @job.featured %>
   <strong>Destaque</strong>
   <%end%>
