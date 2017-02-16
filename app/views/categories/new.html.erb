@@ -1,0 +1,9 @@
+<%=flash[:error]%>
+<% @category.errors.full_messages.each do |msg| %>
+  <%=msg%>
+<%end%>
+<%=form_for @category do |f| %>
+  <%=f.label :name, "Nome"%>
+  <%=f.text_field :name%>
+  <%=f.submit "Criar Categoria"%>
+<%end%>
