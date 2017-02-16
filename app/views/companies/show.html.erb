@@ -1,4 +1,7 @@
-<h1> <%= @company.name %> </h1>
+<h1> <%= @company.name %>
+<%if @company.premium?%>
+  <%= image_tag 'estrela', alt: 'Uma estrela amarela' %>
+<% end %></h1>
 <%= @company.location %>
 <%= @company.mail %>
 <%= @company.phone %>
